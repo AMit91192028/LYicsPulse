@@ -1,0 +1,148 @@
+﻿.navbar {
+  width: 5rem;
+  height: 100vh;
+  position: fixed;
+  background-color: #23232e;
+  transition: width 200ms ease;
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 10%;
+}
+
+.nav-item {
+  width: 100%;
+}
+
+.link-text {
+  display: none;
+  margin-left: 1rem;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: #b6b6b6;
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: 500ms;
+}
+
+.nav-link:hover {
+  filter: grayscale(0%) opacity(1);
+  background: #141418;
+  color: #ececec;
+}
+
+.nav-link img {
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0 1.5rem;
+  filter: drop-shadow(-3px -5px 0px #AA10D8);
+}
+
+.navbar:hover {
+  width: 16rem;
+}
+
+.navbar:hover .link-text {
+  display: block;
+}
+
+.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #ececec;
+  background: #141418;
+  font-size: 1.5rem;
+  letter-spacing: 0.3ch;
+  width: 100%;
+}
+
+.logo img {
+  transform: rotate(0deg);
+  transition: 600ms;
+}
+
+.logo-text {
+  display: inline;
+  position: absolute;
+  left: -999px;
+  transition: 600ms;
+}
+
+.navbar:hover .logo img {
+  transform: rotate(-360deg);
+}
+#logout{
+  position: relative;
+  /* left: -2%; */
+  text-decoration: none;
+  /* width: 100px; */
+  
+}
+.button {
+  position: relative;
+  left: -10px;
+  width: 80px;
+  height: 40px;
+  /* background-color: #000; */
+  display: flex;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+  padding: 12px;
+  gap: 12px;
+  /* border-radius: 8px; */
+  cursor: pointer;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  left: -10px;
+  top: -1px;
+  margin: auto;
+  width: 85px;
+  height: 48px;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.button::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);
+}
+
+.button:hover::after {
+  filter: blur(30px);
+}
+
+.button:hover::before {
+  transform: rotate(-180deg);
+}
+
+.button:active::before {
+  scale: 0.7;
+}
+

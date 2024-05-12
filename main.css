@@ -1,0 +1,130 @@
+/* General body and layout styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #282828;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+nav .nav-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav .nav-link:hover {
+    color: #1ed760;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #1db954;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #1ed760;
+}
+
+.login-btn {
+    background-color: #333;
+}
+
+.login-btn:hover {
+    background-color: #444;
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('80MWuG.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px 50px;
+}
+
+.category {
+    background: url('back.png');
+    background-size: cover;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 16px rgba(0,0,0,0.2);
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #282828;
+    color: white;
+    font-size: 14px;
+}
+/* #one{
+    background: url('genres.jpg');
+} */
+
+@media (max-width: 768px) {
+    .categories {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+#one
+{
+    background: url('genres.jpg');
+}
+
+#two
+{
+    background: url('goodmood.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#three
+{
+    background: url('arijit.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.categories .category h2,p{
+    color: white;
+
+}

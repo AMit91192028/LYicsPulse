@@ -1,5 +1,4 @@
-﻿console.log("Welcome to Spotify");
-
+﻿
 // Initialize the Variables
 let songIndex = 0;
 let audioElement = new Audio('songs/1.mp3');
@@ -169,3 +168,23 @@ document.getElementById('previous').addEventListener('click', () => {
     masterPlay.classList.remove('fa-play-circle');
     masterPlay.classList.add('fa-pause-circle');
 })
+
+function loadSong(songIndex) {
+    audioElement.src = songs[songIndex].filePath;  
+    masterSongName.innerText = songs[songIndex].songName;  
+    audioElement.currentTime = 0;  
+    audioElement.play();  
+    masterPlay.classList.remove('fa-play-circle');
+    masterPlay.classList.add('fa-pause-circle');
+    gif.style.opacity = 1;  
+}
+
+// Play next song when current song ends
+audioElement.addEventListener('ended', () => {
+    songIndex = (songIndex + 1) % songs.length;  
+    loadSong(songIndex); 
+});
+
+ 
+loadSong(songCIndex);
+ 
